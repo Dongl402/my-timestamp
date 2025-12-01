@@ -1,8 +1,8 @@
 {
   "name": "my-timestamp",
-  "displayName": "Timestamp Converter",
+  "displayName": "My-timestamp",
   "description": "Convert between Unix timestamps and readable datetime formats in any timezone. Toggle display, insert timestamps, and work with international teams.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "shidongliang",
   "author": {
     "name": "shidongliang"
@@ -67,7 +67,7 @@
       }
     ],
     "configuration": {
-      "title": "Timestamp Converter",
+      "title": "My-timestamp",
       "properties": {
         "my-timestamp.timezone": {
           "type": "string",

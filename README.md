@@ -1,4 +1,4 @@
-# Timestamp Converter
+# My-timestamp
 
 A powerful VS Code extension that helps you work with Unix timestamps. Instantly convert between timestamps and human-readable dates in any timezone!
 
