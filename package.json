@@ -1,0 +1,190 @@
+{
+  "name": "my-timestamp",
+  "displayName": "Timestamp Converter",
+  "description": "Convert between Unix timestamps and readable datetime formats in any timezone. Toggle display, insert timestamps, and work with international teams.",
+  "version": "0.0.1",
+  "publisher": "shidongliang",
+  "author": {
+    "name": "shidongliang"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dongl402/my-timestamp"
+  },
+  "bugs": {
+    "url": "https://github.com/Dongl402/my-timestamp/issues"
+  },
+  "homepage": "https://github.com/Dongl402/my-timestamp#readme",
+  "keywords": [
+    "timestamp",
+    "datetime",
+    "timezone",
+    "converter",
+    "unix timestamp",
+    "date",
+    "time",
+    "utc",
+    "epoch"
+  ],
+  "engines": {
+    "vscode": "^1.106.0"
+  },
+  "categories": [
+    "Formatters",
+    "Other"
+  ],
+  "icon": "icon.png",
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "my-timestamp.showTimestamps",
+        "title": "Timestamp: Show Readable Timestamps"
+      },
+      {
+        "command": "my-timestamp.convertToTimestamp",
+        "title": "Timestamp: Convert DateTime to Timestamp"
+      },
+      {
+        "command": "my-timestamp.selectTimezone",
+        "title": "Timestamp: Select Timezone"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "my-timestamp.showTimestamps",
+        "key": "ctrl+shift+t",
+        "mac": "cmd+shift+t",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "my-timestamp.convertToTimestamp",
+        "key": "ctrl+shift+d",
+        "mac": "cmd+shift+d",
+        "when": "editorTextFocus"
+      }
+    ],
+    "configuration": {
+      "title": "Timestamp Converter",
+      "properties": {
+        "my-timestamp.timezone": {
+          "type": "string",
+          "default": "local",
+          "enum": [
+            "local",
+            "UTC",
+            "Asia/Shanghai",
+            "Asia/Tokyo",
+            "Asia/Hong_Kong",
+            "Asia/Singapore",
+            "Asia/Seoul",
+            "Asia/Kolkata",
+            "Asia/Dubai",
+            "Asia/Bangkok",
+            "America/New_York",
+            "America/Chicago",
+            "America/Denver",
+            "America/Los_Angeles",
+            "America/Toronto",
+            "America/Mexico_City",
+            "America/Sao_Paulo",
+            "Europe/London",
+            "Europe/Paris",
+            "Europe/Berlin",
+            "Europe/Moscow",
+            "Europe/Istanbul",
+            "Europe/Amsterdam",
+            "Australia/Sydney",
+            "Australia/Melbourne",
+            "Pacific/Auckland",
+            "Africa/Cairo",
+            "Africa/Johannesburg"
+          ],
+          "enumDescriptions": [
+            "System Timezone",
+            "Coordinated Universal Time",
+            "China Standard Time (UTC+8)",
+            "Japan Standard Time (UTC+9)",
+            "Hong Kong Time (UTC+8)",
+            "Singapore Time (UTC+8)",
+            "Korea Standard Time (UTC+9)",
+            "India Standard Time (UTC+5:30)",
+            "Gulf Standard Time (UTC+4)",
+            "Indochina Time (UTC+7)",
+            "Eastern Time (UTC-5/-4)",
+            "Central Time (UTC-6/-5)",
+            "Mountain Time (UTC-7/-6)",
+            "Pacific Time (UTC-8/-7)",
+            "Eastern Time Canada (UTC-5/-4)",
+            "Central Time Mexico (UTC-6/-5)",
+            "Brasília Time (UTC-3)",
+            "GMT/BST (UTC+0/+1)",
+            "Central European Time (UTC+1/+2)",
+            "Central European Time (UTC+1/+2)",
+            "Moscow Standard Time (UTC+3)",
+            "Turkey Time (UTC+3)",
+            "Central European Time (UTC+1/+2)",
+            "Australian Eastern Time (UTC+10/+11)",
+            "Australian Eastern Time (UTC+10/+11)",
+            "New Zealand Time (UTC+12/+13)",
+            "Eastern European Time (UTC+2)",
+            "South Africa Standard Time (UTC+2)"
+          ],
+          "description": "Timezone to use for timestamp conversion"
+        },
+        "my-timestamp.showTimezoneLabel": {
+          "type": "boolean",
+          "default": false,
+          "description": "Show timezone abbreviation in timestamp decorations (e.g., 'PST', 'CST')"
+        },
+        "my-timestamp.defaultFormat": {
+          "type": "string",
+          "default": "seconds",
+          "enum": ["seconds", "milliseconds"],
+          "description": "Default timestamp format (seconds or milliseconds)"
+        },
+        "my-timestamp.dateFormat": {
+          "type": "string",
+          "default": "yyyy-MM-dd HH:mm:ss",
+          "description": "Date format template for display"
+        },
+        "my-timestamp.minYear": {
+          "type": "number",
+          "default": 1970,
+          "description": "Minimum valid year for timestamps"
+        },
+        "my-timestamp.maxYear": {
+          "type": "number",
+          "default": 2100,
+          "description": "Maximum valid year for timestamps"
+        },
+        "my-timestamp.decorationColor": {
+          "type": "string",
+          "default": "editorCodeLens.foreground",
+          "description": "Color for timestamp decorations (CSS color or VS Code theme color)"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.106.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@typescript-eslint/eslint-plugin": "^8.39.0",
+    "@typescript-eslint/parser": "^8.39.0",
+    "eslint": "^9.32.0",
+    "typescript": "^5.9.2",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
