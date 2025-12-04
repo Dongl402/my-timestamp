@@ -1,5 +1,7 @@
 # My-timestamp
 
+[English](README.md) | [简体中文](README.zh-CN.md)
+
 A powerful VS Code extension that helps you work with Unix timestamps. Instantly convert between timestamps and human-readable dates in any timezone!
 
 ## Features
