@@ -1,8 +1,8 @@
 {
   "name": "my-timestamp",
-  "displayName": "My-timestamp",
+  "displayName": "Quick Timestamps",
   "description": "Convert between Unix timestamps and readable datetime formats in any timezone. Toggle display, insert timestamps, and work with international teams.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "shidongliang",
   "author": {
     "name": "shidongliang"
@@ -67,7 +67,7 @@
       }
     ],
     "configuration": {
-      "title": "My-timestamp",
+      "title": "Quick Timestamps",
       "properties": {
         "my-timestamp.timezone": {
           "type": "string",
