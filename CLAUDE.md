@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a VS Code extension project called "my-timestamp". It's a basic extension scaffolded from the VS Code extension template with a simple "Hello World" command.
+This is a VS Code extension called "Quick Timestamps" (package name: `my-timestamp`). It converts between Unix timestamps and readable datetime formats in any timezone, with inline decorations, datetime-to-timestamp conversion, and a timezone selector.
 
 ## Build and Development Commands
 
@@ -61,7 +61,7 @@ Commands are registered in two places:
 1. **Declared** in `package.json` under `contributes.commands`
 2. **Implemented** in `src/extension.ts` via `vscode.commands.registerCommand()`
 
-The command ID in both places must match (e.g., `my-timestamp.helloWorld`).
+The command ID in both places must match (e.g., `quick-timestamp.showTimestamps`). Legacy `my-timestamp.*` command aliases are also registered in `extension.ts` for backward compatibility but are NOT declared in `package.json`.
 
 ### Adding New Commands
 1. Add command declaration to `package.json` under `contributes.commands`

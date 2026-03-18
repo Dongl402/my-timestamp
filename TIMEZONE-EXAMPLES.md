@@ -43,8 +43,8 @@ Open Settings (Cmd+,) and search for "timestamp":
 ### Example 1: Show timestamps in Shanghai time
 ```json
 {
-  "my-timestamp.timezone": "Asia/Shanghai",
-  "my-timestamp.showTimezoneLabel": true
+  "quick-timestamp.timezone": "Asia/Shanghai",
+  "quick-timestamp.showTimezoneLabel": true
 }
 ```
 Result: `1609459200 → 2021-01-01 08:00:00 CST`
@@ -52,8 +52,8 @@ Result: `1609459200 → 2021-01-01 08:00:00 CST`
 ### Example 2: Show timestamps in New York time
 ```json
 {
-  "my-timestamp.timezone": "America/New_York",
-  "my-timestamp.showTimezoneLabel": true
+  "quick-timestamp.timezone": "America/New_York",
+  "quick-timestamp.showTimezoneLabel": true
 }
 ```
 Result: `1609459200 → 2020-12-31 19:00:00 EST`
@@ -61,8 +61,8 @@ Result: `1609459200 → 2020-12-31 19:00:00 EST`
 ### Example 3: Show timestamps in UTC without timezone label
 ```json
 {
-  "my-timestamp.timezone": "UTC",
-  "my-timestamp.showTimezoneLabel": false
+  "quick-timestamp.timezone": "UTC",
+  "quick-timestamp.showTimezoneLabel": false
 }
 ```
 Result: `1609459200 → 2021-01-01 00:00:00`
@@ -70,8 +70,8 @@ Result: `1609459200 → 2021-01-01 00:00:00`
 ### Example 4: Use local timezone (default)
 ```json
 {
-  "my-timestamp.timezone": "local",
-  "my-timestamp.showTimezoneLabel": false
+  "quick-timestamp.timezone": "local",
+  "quick-timestamp.showTimezoneLabel": false
 }
 ```
 Result: Uses your computer's timezone

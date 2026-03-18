@@ -1,4 +1,4 @@
-# My-timestamp
+# Quick Timestamps
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
@@ -103,13 +103,13 @@ Easily switch between timezones with a convenient dropdown selector.
 
 Configure the extension via VS Code settings (`Cmd+,` or `Ctrl+,`):
 
-### `my-timestamp.timezone`
+### `quick-timestamp.timezone`
 **Type:** String dropdown
 **Default:** `"local"`
 **Options:** 30+ timezones (local, UTC, Asia/Shanghai, America/New_York, etc.)
 **Description:** Timezone to use for timestamp conversion
 
-### `my-timestamp.showTimezoneLabel`
+### `quick-timestamp.showTimezoneLabel`
 **Type:** Boolean
 **Default:** `false`
 **Description:** Show timezone abbreviation in decorations (e.g., "CST", "PST")
@@ -119,7 +119,7 @@ Configure the extension via VS Code settings (`Cmd+,` or `Ctrl+,`):
 1609459200 → 2021-01-01 08:00:00 CST
 ```
 
-### `my-timestamp.dateFormat`
+### `quick-timestamp.dateFormat`
 **Type:** String
 **Default:** `"yyyy-MM-dd HH:mm:ss"`
 **Description:** Date format template for display
@@ -127,23 +127,23 @@ Configure the extension via VS Code settings (`Cmd+,` or `Ctrl+,`):
 **Example custom format:**
 ```json
 {
-  "my-timestamp.dateFormat": "yyyy/MM/dd HH:mm:ss"
+  "quick-timestamp.dateFormat": "yyyy/MM/dd HH:mm:ss"
 }
 ```
 Result: `1609459200 → 2021/01/01 00:00:00`
 
-### `my-timestamp.defaultFormat`
+### `quick-timestamp.defaultFormat`
 **Type:** String
 **Default:** `"seconds"`
 **Options:** `"seconds"`, `"milliseconds"`
 **Description:** Default timestamp format when converting dates
 
-### `my-timestamp.minYear` / `my-timestamp.maxYear`
+### `quick-timestamp.minYear` / `quick-timestamp.maxYear`
 **Type:** Number
 **Default:** `1970` / `2100`
 **Description:** Valid year range for timestamp detection
 
-### `my-timestamp.decorationColor`
+### `quick-timestamp.decorationColor`
 **Type:** String
 **Default:** `"editorCodeLens.foreground"`
 **Description:** Color for timestamp decorations
@@ -153,8 +153,8 @@ Result: `1609459200 → 2021/01/01 00:00:00`
 ### Example 1: Work with Chinese Team
 ```json
 {
-  "my-timestamp.timezone": "Asia/Shanghai",
-  "my-timestamp.showTimezoneLabel": true
+  "quick-timestamp.timezone": "Asia/Shanghai",
+  "quick-timestamp.showTimezoneLabel": true
 }
 ```
 Result: `1609459200 → 2021-01-01 08:00:00 CST`
@@ -162,8 +162,8 @@ Result: `1609459200 → 2021-01-01 08:00:00 CST`
 ### Example 2: Work with US East Coast Team
 ```json
 {
-  "my-timestamp.timezone": "America/New_York",
-  "my-timestamp.showTimezoneLabel": true
+  "quick-timestamp.timezone": "America/New_York",
+  "quick-timestamp.showTimezoneLabel": true
 }
 ```
 Result: `1609459200 → 2020-12-31 19:00:00 EST`
@@ -171,8 +171,8 @@ Result: `1609459200 → 2020-12-31 19:00:00 EST`
 ### Example 3: Always Use UTC
 ```json
 {
-  "my-timestamp.timezone": "UTC",
-  "my-timestamp.showTimezoneLabel": false
+  "quick-timestamp.timezone": "UTC",
+  "quick-timestamp.showTimezoneLabel": false
 }
 ```
 Result: `1609459200 → 2021-01-01 00:00:00`
@@ -180,7 +180,7 @@ Result: `1609459200 → 2021-01-01 00:00:00`
 ### Example 4: Millisecond Timestamps
 ```json
 {
-  "my-timestamp.defaultFormat": "milliseconds"
+  "quick-timestamp.defaultFormat": "milliseconds"
 }
 ```
 Converting `2024-01-15 14:30:00` gives: `1705327800000`

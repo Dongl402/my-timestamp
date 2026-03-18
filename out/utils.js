@@ -44,7 +44,7 @@ const vscode = __importStar(require("vscode"));
  * Get configuration from VS Code settings
  */
 function getConfig() {
-    const config = vscode.workspace.getConfiguration('my-timestamp');
+    const config = vscode.workspace.getConfiguration('quick-timestamp');
     return {
         timezone: config.get('timezone', 'local'),
         showTimezoneLabel: config.get('showTimezoneLabel', false),

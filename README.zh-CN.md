@@ -1,4 +1,4 @@
-# My-timestamp
+# Quick Timestamps
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
@@ -103,13 +103,13 @@
 
 通过 VS Code 设置配置扩展(`Cmd+,` 或 `Ctrl+,`):
 
-### `my-timestamp.timezone`
+### `quick-timestamp.timezone`
 **类型:** 字符串下拉列表
 **默认值:** `"local"`
 **选项:** 30+ 个时区(local、UTC、Asia/Shanghai、America/New_York 等)
 **说明:** 用于时间戳转换的时区
 
-### `my-timestamp.showTimezoneLabel`
+### `quick-timestamp.showTimezoneLabel`
 **类型:** 布尔值
 **默认值:** `false`
 **说明:** 在装饰中显示时区缩写(如 "CST"、"PST")
@@ -119,7 +119,7 @@
 1609459200 → 2021-01-01 08:00:00 CST
 ```
 
-### `my-timestamp.dateFormat`
+### `quick-timestamp.dateFormat`
 **类型:** 字符串
 **默认值:** `"yyyy-MM-dd HH:mm:ss"`
 **说明:** 显示的日期格式模板
@@ -127,23 +127,23 @@
 **自定义格式示例:**
 ```json
 {
-  "my-timestamp.dateFormat": "yyyy/MM/dd HH:mm:ss"
+  "quick-timestamp.dateFormat": "yyyy/MM/dd HH:mm:ss"
 }
 ```
 结果:`1609459200 → 2021/01/01 00:00:00`
 
-### `my-timestamp.defaultFormat`
+### `quick-timestamp.defaultFormat`
 **类型:** 字符串
 **默认值:** `"seconds"`
 **选项:** `"seconds"`、`"milliseconds"`
 **说明:** 转换日期时的默认时间戳格式
 
-### `my-timestamp.minYear` / `my-timestamp.maxYear`
+### `quick-timestamp.minYear` / `quick-timestamp.maxYear`
 **类型:** 数字
 **默认值:** `1970` / `2100`
 **说明:** 时间戳检测的有效年份范围
 
-### `my-timestamp.decorationColor`
+### `quick-timestamp.decorationColor`
 **类型:** 字符串
 **默认值:** `"editorCodeLens.foreground"`
 **说明:** 时间戳装饰的颜色
@@ -153,8 +153,8 @@
 ### 示例 1: 与中国团队协作
 ```json
 {
-  "my-timestamp.timezone": "Asia/Shanghai",
-  "my-timestamp.showTimezoneLabel": true
+  "quick-timestamp.timezone": "Asia/Shanghai",
+  "quick-timestamp.showTimezoneLabel": true
 }
 ```
 结果:`1609459200 → 2021-01-01 08:00:00 CST`
@@ -162,8 +162,8 @@
 ### 示例 2: 与美国东海岸团队协作
 ```json
 {
-  "my-timestamp.timezone": "America/New_York",
-  "my-timestamp.showTimezoneLabel": true
+  "quick-timestamp.timezone": "America/New_York",
+  "quick-timestamp.showTimezoneLabel": true
 }
 ```
 结果:`1609459200 → 2020-12-31 19:00:00 EST`
@@ -171,8 +171,8 @@
 ### 示例 3: 始终使用 UTC
 ```json
 {
-  "my-timestamp.timezone": "UTC",
-  "my-timestamp.showTimezoneLabel": false
+  "quick-timestamp.timezone": "UTC",
+  "quick-timestamp.showTimezoneLabel": false
 }
 ```
 结果:`1609459200 → 2021-01-01 00:00:00`
@@ -180,7 +180,7 @@
 ### 示例 4: 毫秒级时间戳
 ```json
 {
-  "my-timestamp.defaultFormat": "milliseconds"
+  "quick-timestamp.defaultFormat": "milliseconds"
 }
 ```
 转换 `2024-01-15 14:30:00` 得到:`1705327800000`

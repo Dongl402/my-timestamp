@@ -14,7 +14,7 @@ export interface TimestampConfig {
  * Get configuration from VS Code settings
  */
 export function getConfig(): TimestampConfig {
-    const config = vscode.workspace.getConfiguration('my-timestamp');
+    const config = vscode.workspace.getConfiguration('quick-timestamp');
     return {
         timezone: config.get<string>('timezone', 'local'),
         showTimezoneLabel: config.get<boolean>('showTimezoneLabel', false),

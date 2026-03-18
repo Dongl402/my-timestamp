@@ -78,7 +78,7 @@ const TIMEZONE_OPTIONS = [
  * Show timezone selector and update configuration
  */
 async function selectTimezone() {
-    const config = vscode.workspace.getConfiguration('my-timestamp');
+    const config = vscode.workspace.getConfiguration('quick-timestamp');
     const currentTimezone = config.get('timezone', 'local');
     // Find current timezone in options
     const currentOption = TIMEZONE_OPTIONS.find(opt => opt.value === currentTimezone);

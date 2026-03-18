@@ -2,7 +2,7 @@
   "name": "my-timestamp",
   "displayName": "Quick Timestamps",
   "description": "Convert between Unix timestamps and readable datetime formats in any timezone. Toggle display, insert timestamps, and work with international teams.",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "publisher": "shidongliang",
   "author": {
     "name": "shidongliang"
@@ -40,27 +40,27 @@
   "contributes": {
     "commands": [
       {
-        "command": "my-timestamp.showTimestamps",
+        "command": "quick-timestamp.showTimestamps",
         "title": "Timestamp: Show Readable Timestamps"
       },
       {
-        "command": "my-timestamp.convertToTimestamp",
+        "command": "quick-timestamp.convertToTimestamp",
         "title": "Timestamp: Convert DateTime to Timestamp"
       },
       {
-        "command": "my-timestamp.selectTimezone",
+        "command": "quick-timestamp.selectTimezone",
         "title": "Timestamp: Select Timezone"
       }
     ],
     "keybindings": [
       {
-        "command": "my-timestamp.showTimestamps",
+        "command": "quick-timestamp.showTimestamps",
         "key": "ctrl+shift+t",
         "mac": "cmd+shift+t",
         "when": "editorTextFocus"
       },
       {
-        "command": "my-timestamp.convertToTimestamp",
+        "command": "quick-timestamp.convertToTimestamp",
         "key": "ctrl+shift+d",
         "mac": "cmd+shift+d",
         "when": "editorTextFocus"
@@ -69,7 +69,7 @@
     "configuration": {
       "title": "Quick Timestamps",
       "properties": {
-        "my-timestamp.timezone": {
+        "quick-timestamp.timezone": {
           "type": "string",
           "default": "local",
           "enum": [
@@ -134,33 +134,33 @@
           ],
           "description": "Timezone to use for timestamp conversion"
         },
-        "my-timestamp.showTimezoneLabel": {
+        "quick-timestamp.showTimezoneLabel": {
           "type": "boolean",
           "default": false,
           "description": "Show timezone abbreviation in timestamp decorations (e.g., 'PST', 'CST')"
         },
-        "my-timestamp.defaultFormat": {
+        "quick-timestamp.defaultFormat": {
           "type": "string",
           "default": "seconds",
           "enum": ["seconds", "milliseconds"],
           "description": "Default timestamp format (seconds or milliseconds)"
         },
-        "my-timestamp.dateFormat": {
+        "quick-timestamp.dateFormat": {
           "type": "string",
           "default": "yyyy-MM-dd HH:mm:ss",
           "description": "Date format template for display"
         },
-        "my-timestamp.minYear": {
+        "quick-timestamp.minYear": {
           "type": "number",
           "default": 1970,
           "description": "Minimum valid year for timestamps"
         },
-        "my-timestamp.maxYear": {
+        "quick-timestamp.maxYear": {
           "type": "number",
           "default": 2100,
           "description": "Maximum valid year for timestamps"
         },
-        "my-timestamp.decorationColor": {
+        "quick-timestamp.decorationColor": {
           "type": "string",
           "default": "editorCodeLens.foreground",
           "description": "Color for timestamp decorations (CSS color or VS Code theme color)"
